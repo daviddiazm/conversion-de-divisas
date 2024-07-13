@@ -1,4 +1,4 @@
-export interface Currency {
+export interface Stock {
   amount: number;
   base:   string;
   date:   Date;

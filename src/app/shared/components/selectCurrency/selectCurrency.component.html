@@ -1,0 +1,19 @@
+
+<div class="mb-3">
+  <label for="" class="form-label">City</label>
+  <select
+    class="form-select form-select-lg"
+    name=""
+    id=""
+  >
+    <option selected >Select one</option>
+    <option
+      *ngFor="let currency of currencies"
+      [value]="currency.code"
+      #option
+      (click)="onCode(option.value)"
+      >
+      {{currency.code}} - {{currency.description}} </option>
+  </select>
+</div>
+

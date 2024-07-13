@@ -1,3 +1,10 @@
+<!-- <shared-search-bar
+  (currencySelect)="getcurrenciSelect($event)"
+></shared-search-bar> -->
+
+<shared-select-currency
+  (currencyCode)="getcurrenciSelect($event)"
+></shared-select-currency>
 <div class="col-md-4">
   <label for="first-number" class="form-label">First number</label>
   <input type="text" class="form-control" id="first-number" value="" required />
@@ -11,9 +18,10 @@
     Featured
   </div>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
+    <h5 class="card-title"> El valor de {{currencyGet}} en USD </h5>
     <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
-    <a class="btn btn-primary" (click)="getCurency()" >Go somewhere</a>
+    <a class="btn btn-primary" (click)="getStock()"> Ejecutar </a>
+    <h5 class="card-title"> ${{stock?.rates?.['USD'] || '0.0' }} </h5>
   </div>
   <div class="card-footer text-body-secondary">
     2 days ago
